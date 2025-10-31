@@ -8,7 +8,7 @@ const Task = ({ amount }) => (
                 className={`task__item task__item--row`}
                 key={task.id}
             >
-                <span>{task.content}</span>
+                <span>{task.number}</span>
             </li>
         ))}
     </>

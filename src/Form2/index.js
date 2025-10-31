@@ -2,7 +2,7 @@ import "./style.css";
 import React, { useState } from 'react';
 
 
-const Form = ({ changeAmount }) => {
+const Form2 = ({ changeAmount }) => {
 
     const [number, setNumber] = useState();
 
@@ -12,20 +12,19 @@ const Form = ({ changeAmount }) => {
     }
 
     return (
-        <>Podaj kwotę euro do przeliczenia
+        <>Podaj aktualny kurs walut
             <form onSubmit={onFormSubmit}>
                 <input
                     value={number}
+                    type="number"
                     onChange={({ target }) => setNumber(target.value)}
                     className="form__field"
-                    placeholder="Wpisz kwotę" />
+                    placeholder="Wpisz aktualny kurs" />
                 <button className="button">Przelicz</button>
             </form>
-            
-            
         </>
     )
 }
 
 
-export default Form;    
+export default Form2;    
