@@ -4,25 +4,24 @@ import React, { useState } from 'react';
 
 const Form1 = ({ changeAmount }) => {
 
-    const [number, setNumber] = useState();
+    const [number1, setNumber1] = useState();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        changeAmount(number)
+        changeAmount(number1)
     }
 
     return (
         <>Podaj kwotę euro do przeliczenia
             <form onSubmit={onFormSubmit}>
                 <input
-                    value={number}
+                    value={number1}
                     type="number"
-                    onChange={({ target }) => setNumber(target.value)}
+                    onChange={({ target }) => setNumber1(target.value)}
                     className="form__field"
                     placeholder="Wpisz kwotę" />
             </form>
-            
-            
+
         </>
     )
 }

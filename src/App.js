@@ -16,20 +16,9 @@ function App() {
 
   const changeAmount = (number) => {
     setAmount(amount => [
-      { number }
+      { number: number *number }
     ]);
   };
-
-  const calculateValue = (event) => {
-        event.preventDefault();
-
-        const amount = document.querySelector(".js-A");
-        const exchangeRate = document.querySelector(".js-eR");
-        const value = amount.value * exchangeRate.value;
-        const finalValue = document.querySelector(".js-finalValue");
-        finalValue.innerText = value;
-    };
-  
 
   return (
     <Container>
