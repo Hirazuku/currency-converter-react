@@ -10,62 +10,31 @@ import React, { useState } from 'react';
 
 function App() {
 
-  const [number1, setNumber1] = useState();
-  const [number2, setNumber2] = useState();
   const [amount, setAmount] = useState([
     { id: 1, number: 8, done: true },
   ]);
 
   const changeAmount = (number) => {
     setAmount(amount => [
-      { number: number1 * number2}
+      { number: number * 4.32 }
     ]);
   };
-
-
-    const onFormSubmit = (event) => {
-      event.preventDefault();
-      changeAmount(number1, number2);
-    }
-
-    return (
-      <>Podaj kwotę euro do przeliczenia
-        <form onSubmit={onFormSubmit}>
-          <input
-            value={number1}
-            type="number"
-            onChange={({ target }) => setNumber1(target.value)}
-            className="form__field"
-            placeholder="Wpisz kwotę" />
-        </form>
-        <form onSubmit={onFormSubmit}>
-          <input
-            value={number2}
-            type="number"
-            onChange={({ target }) => setNumber2(target.value)}
-            className="form__field"
-            placeholder="Wpisz aktualny kurs" />
-          <button className="button">Przelicz</button>
-        </form>
-        <p>{number1}</p>
-        {number2}
-      </>
-    )
-
-
-
-
 
   return (
     <Container>
 
       <Header
         title="Zamiana walut"
-
       />
 
-
-
+      <Section
+        title="Policz wartość:"
+        body={
+          <Form1
+            changeAmount={changeAmount}
+          />
+        }
+      />
 
       <Section
         body={
@@ -77,13 +46,12 @@ function App() {
 
       <Section
         title="Kwota wynosi: "
-        body={<Task
-          amount={amount}
+        body={<Task 
+        amount={amount}
         />}
 
       />
-
-
+EUR
     </Container>
   );
 }
