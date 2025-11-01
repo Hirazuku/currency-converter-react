@@ -6,6 +6,7 @@ const Form2 = ({ changeAmount }) => {
 
     const [number, setNumber] = useState();
 
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
         changeAmount(number)

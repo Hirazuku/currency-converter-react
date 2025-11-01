@@ -16,7 +16,7 @@ function App() {
 
   const changeAmount = (number) => {
     setAmount(amount => [
-      { number: number *number }
+      { number }
     ]);
   };
 
@@ -58,4 +58,3 @@ function App() {
 }
 
 export default App;
-

@@ -5,10 +5,12 @@ import React, { useState } from 'react';
 const Form1 = ({ changeAmount }) => {
 
     const [number1, setNumber1] = useState();
+    const [number2, setNumber2] = useState();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        changeAmount(number1)
+        changeAmount(number1);
+        changeAmount(number2);
     }
 
     return (
@@ -21,9 +23,20 @@ const Form1 = ({ changeAmount }) => {
                     className="form__field"
                     placeholder="Wpisz kwotę" />
             </form>
-
+            <form onSubmit={onFormSubmit}>
+                <input
+                    value={number2}
+                    type="number"
+                    onChange={({ target }) => setNumber2(target.value)}
+                    className="form__field"
+                    placeholder="Wpisz aktualny kurs" />
+                <button className="button">Przelicz</button>
+            </form>
+            <p>{number1}</p>
+            {number2}
         </>
     )
+    
 }
 
 
