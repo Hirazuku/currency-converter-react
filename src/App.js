@@ -13,11 +13,19 @@ function App() {
     { id: 1, number: 8, done: true },
   ]);
 
-  const changeAmount = (number) => {
+  const changeAmountEuro = (number) => {
     setAmount(amount => [
       { number: number * 4.32 }
     ]);
   };
+
+  const changeAmountJen = (number) => {
+    setAmount(amount => [
+      { number: number * 2.55 }
+    ]);
+  };
+
+  const money = "EUR";
 
   return (
     <Container>
@@ -30,19 +38,22 @@ function App() {
         title="Policz wartość:"
         body={
           <Form1
-            changeAmount={changeAmount}
+            changeAmountEuro={changeAmountEuro}
+            changeAmountJen={changeAmountJen}
+            money={money}
           />
         }
       />
 
       <Section
         title="Kwota wynosi: "
-        body={<Task 
-        amount={amount}
+        body={<Task
+          amount={amount}
+          money={money}
         />}
 
       />
-EUR
+      
     </Container>
   );
 }

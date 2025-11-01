@@ -2,22 +2,33 @@ import "./style.css";
 import React, { useState } from 'react';
 
 
-const Form1 = ({ changeAmount }) => {
+const Form1 = ({ changeAmountEuro, changeAmountJen }) => {
 
     const [number, setNumber] = useState();
-    const [amount, setAmount] = useState([
-    { id: 1, number: 8, done: true },
-]);
+    const [currency, setCurrency] = useState();
+
+    const onSelectChange = ({ target }) => {
+        setCurrency(target.value);
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        changeAmount(number);
-    }
+        if (currency == "EUR") {
+            changeAmountEuro(number);
+            <div>EUR</div>
+            return;
+        }
+        if (currency == "JPY") {
+            changeAmountJen(number);
+            <div>JPY</div>
+            return;
+        }
+    };
 
-    
+
 
     return (
-        <>Podaj kwotę euro do przeliczenia
+        <>Podaj kwotę do przeliczenia
 
             <form onSubmit={onFormSubmit}>
                 <input
@@ -25,7 +36,11 @@ const Form1 = ({ changeAmount }) => {
                     type="number"
                     onChange={({ target }) => setNumber(target.value)}
                     className="form__field"
-                    placeholder="Wpisz aktualny kurs" />
+                    placeholder="Wpisz kwotę: " />
+                <select value={currency} onChange={onSelectChange}>
+                    <option>EUR</option>
+                    <option>JPY</option>
+                </select>
                 <button className="button">Przelicz</button>
             </form>
         </>
