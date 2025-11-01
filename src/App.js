@@ -3,7 +3,6 @@ import Container from "./Container";
 import Header from "./Header";
 import Section from "./Section";
 import Form1 from "./Form1";
-import Form2 from "./Form2";
 import Task from "./Task";
 import React, { useState } from 'react';
 
@@ -31,14 +30,6 @@ function App() {
         title="Policz wartość:"
         body={
           <Form1
-            changeAmount={changeAmount}
-          />
-        }
-      />
-
-      <Section
-        body={
-          <Form2
             changeAmount={changeAmount}
           />
         }
