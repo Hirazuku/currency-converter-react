@@ -14,13 +14,13 @@ function App() {
 
   const changeAmountEuro = (number) => {
     setAmount(amount => [
-      { number: number * 4.32 }
+      { number: number * 0.23 }
     ]);
   };
 
   const changeAmountJen = (number) => {
     setAmount(amount => [
-      { number: number * 2.55 }
+      { number: number * 41.76 }
     ]);
   };
 

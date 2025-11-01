@@ -25,7 +25,7 @@ const Form1 = ({ changeAmountEuro, changeAmountJen }) => {
 
     return (
         <>
-        <p className="form__section--title">Podaj kwotę do przeliczenia</p>
+        <p className="form__section--title">Podaj kwotę do przeliczenia w PLN</p>
 
             <form onSubmit={onFormSubmit}>
                 <input
