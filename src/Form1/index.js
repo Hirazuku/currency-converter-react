@@ -6,11 +6,21 @@ const Form1 = ({ changeAmount }) => {
 
     const [number1, setNumber1] = useState();
     const [number2, setNumber2] = useState();
+    const [amount, setAmount] = useState([
+        { id: 1, number: 8, done: true },
+    ]);
+
+    const multiplyAmount = (number) => {
+        setAmount(amount => [
+            { number: number1 * number2 }
+        ]);
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         changeAmount(number1);
         changeAmount(number2);
+        multiplyAmount(number1, number2);
     }
 
     return (
@@ -36,7 +46,7 @@ const Form1 = ({ changeAmount }) => {
             {number2}
         </>
     )
-    
+
 }
 
 

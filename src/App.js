@@ -16,7 +16,7 @@ function App() {
 
   const changeAmount = (number) => {
     setAmount(amount => [
-      { number }
+      { number: number * 4 }
     ]);
   };
 
@@ -31,6 +31,7 @@ function App() {
         title="Policz wartość:"
         body={
           <Form1
+          amount={amount}
             changeAmount={changeAmount}
           />
         }
