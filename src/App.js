@@ -1,4 +1,3 @@
-import './App.css';
 import Container from "./Container";
 import Header from "./Header";
 import Section from "./Section";
@@ -25,8 +24,6 @@ function App() {
     ]);
   };
 
-  const money = "EUR";
-
   return (
     <Container>
 
@@ -40,7 +37,6 @@ function App() {
           <Form1
             changeAmountEuro={changeAmountEuro}
             changeAmountJen={changeAmountJen}
-            money={money}
           />
         }
       />
@@ -49,11 +45,9 @@ function App() {
         title="Kwota wynosi: "
         body={<Task
           amount={amount}
-          money={money}
         />}
-
       />
-      
+      <p className="currency__name">EUR/JPY</p>
     </Container>
   );
 }

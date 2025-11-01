@@ -1,0 +1,39 @@
+.button {
+    color: rgb(255, 255, 255);
+    background-color:hsl(180, 100%, 25%);
+    border: none;
+    padding: 10px;
+    width: auto;
+    margin: 10px;
+}
+
+.button:hover {
+    color: rgb(241, 232, 211);
+    background-color: hsl(180, 100%, 40%);
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.form__field {
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border: 2px solid rgba(109, 77, 8, 0.555);
+    border-radius: 5px;
+    width: 70%;
+    max-width: 70%;
+    margin: 10px;
+}
+
+.form__select {
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    border: 2px solid rgba(109, 77, 8, 0.555);
+    border-radius: 5px;
+    width: 80px;
+    max-width: 80%;
+    margin: 5px;
+}
+
+.form__section--title {
+    margin: 10px;
+}

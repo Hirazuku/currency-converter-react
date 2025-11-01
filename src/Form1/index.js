@@ -13,31 +13,32 @@ const Form1 = ({ changeAmountEuro, changeAmountJen }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        if (currency == "EUR") {
-            changeAmountEuro(number);
-            <div>EUR</div>
-            return;
-        }
         if (currency == "JPY") {
             changeAmountJen(number);
-            <div>JPY</div>
+            return;
+        }
+        else {
+            changeAmountEuro(number);
             return;
         }
     };
 
-
-
     return (
-        <>Podaj kwotę do przeliczenia
+        <>
+        <p className="form__section--title">Podaj kwotę do przeliczenia</p>
 
             <form onSubmit={onFormSubmit}>
                 <input
+                    className="form__field"
                     value={number}
                     type="number"
                     onChange={({ target }) => setNumber(target.value)}
                     className="form__field"
                     placeholder="Wpisz kwotę: " />
-                <select value={currency} onChange={onSelectChange}>
+                <select
+                    className="form__select"
+                    value={currency}
+                    onChange={onSelectChange}>
                     <option>EUR</option>
                     <option>JPY</option>
                 </select>

@@ -1,8 +1,7 @@
 .container {
-    margin: 10px;
-    background-image: url("https://i.postimg.cc/R049bhH9/pexels-expect-best-323705-blacknwhite.jpg");
+    margin: auto;
     max-width: 900px;
     color: #000000;
-    background-color: rgb(239, 235, 235);
+     background-image: url("https://i.postimg.cc/R049bhH9/pexels-expect-best-323705-blacknwhite.jpg");
     font: 25px / 2 'Oswald', sans-serif;
 }
