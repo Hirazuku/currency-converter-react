@@ -34,10 +34,8 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
             <form onSubmit={onFormSubmit}>
                 <input
                     className="form__field"
-                    value={number}
                     type="number"
                     onChange={({ target }) => setNumber(target.value)}
-                    className="form__field"
                     placeholder="Wpisz kwotę: " />
                 <select
                     className="form__select"

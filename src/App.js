@@ -1,6 +1,5 @@
 import Container from "./Container";
 import Header from "./Header";
-
 import Form from "./Form";
 import Task from "./Task";
 import React, { useState } from 'react';
@@ -14,31 +13,15 @@ function App() {
 
   const changeAmountEuro = (number) => {
     setAmount(amount => [
-      { number: number * 0.23, content: "EUR" }
+      { number: number * 0.23, content: "EUR", id: 1 }
     ]);
   };
 
   const changeAmountJen = (number) => {
     setAmount(amount => [
-      { number: number * 41.76, content: "JPY" }
+      { number: number * 41.76, content: "JPY", id: 1 }
     ]);
   };
-
-  const Task = ({amount}) => (
-            
-        <>
-            {
-                amount.map(task => (
-                    <li
-                        className={`task__item task__item--row`}
-                        key={task.id}
-                    >
-                        <span>{task.number} {task.content}</span>
-                    </li>
-                ))
-            }
-        </>
-        );
 
   return (
     <Container>

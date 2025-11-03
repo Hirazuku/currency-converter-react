@@ -9,7 +9,7 @@ import "./style.css";
                         className={`task__item task__item--row`}
                         key={task.id}
                     >
-                        <span>{task.number} {task.content}</span>
+                        <span >{task.number} {task.content}</span>
                     </li>
                 ))
             }
