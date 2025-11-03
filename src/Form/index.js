@@ -2,7 +2,7 @@ import "./style.css";
 import React, { useState } from 'react';
 
 
-const Form1 = ({ changeAmountEuro, changeAmountJen }) => {
+const Form = ({ changeAmountEuro, changeAmountJen }) => {
 
     const [number, setNumber] = useState();
     const [currency, setCurrency] = useState();
@@ -50,4 +50,4 @@ const Form1 = ({ changeAmountEuro, changeAmountJen }) => {
 }
 
 
-export default Form1;    
+export default Form;    

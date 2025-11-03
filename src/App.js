@@ -1,7 +1,7 @@
 import Container from "./Container";
 import Header from "./Header";
 import Section from "./Section";
-import Form1 from "./Form1";
+import Form from "./Form";
 import Task from "./Task";
 import React, { useState } from 'react';
 
@@ -34,7 +34,7 @@ function App() {
       <Section
         title="Policz wartość:"
         body={
-          <Form1
+          <Form
             changeAmountEuro={changeAmountEuro}
             changeAmountJen={changeAmountJen}
           />
