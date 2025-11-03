@@ -25,7 +25,11 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
 
     return (
         <>
-        <p className="form__section--title">Podaj kwotę do przeliczenia w PLN</p>
+            <div className="form__grid form__title form--biggerGap">
+                Policz wartość:
+            </div>
+
+            <p className="form__section--title">Podaj kwotę do przeliczenia w PLN</p>
 
             <form onSubmit={onFormSubmit}>
                 <input
@@ -44,10 +48,16 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
                 </select>
                 <button className="button">Przelicz</button>
             </form>
+            
+            <>
+                <section className="form__title form--biggerGap">
+                    <div className="form__grid">
+                        Kwota wynosi:
+                    </div></section>
+            </>
         </>
     )
 
 }
-
 
 export default Form;    
