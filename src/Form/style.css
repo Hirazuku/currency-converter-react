@@ -41,17 +41,9 @@
 
 .form__title {
     padding: 0;
-    margin: 0;
+    margin: 10px;
     font-weight: bold;
     font-size: 25px;
-}
-
-.form__grid {
-    display: grid;
-    grid-template-columns: 2fr repeat(2, 150px);
-    align-content: right;
-    grid-gap: 20px;
-    padding: 10px;
 }
 
 @media (max-width: 600px) {

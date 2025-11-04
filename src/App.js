@@ -1,25 +1,23 @@
 import Container from "./Container";
 import Header from "./Header";
 import Form from "./Form";
-import Task from "./Task";
+import {Result} from "./Result";
 import React, { useState } from 'react';
 
 
 function App() {
 
-  const [amount, setAmount] = useState([
-    { id: 1, number: 8, content: "EUR" },
-  ]);
+  const [amount, setAmount] = useState();
 
   const changeAmountEuro = (number) => {
     setAmount(amount => [
-      { number: number * 0.23, content: "EUR", id: 1 }
+      { changednumber: number * 0.23, number, content: "EUR", id: 1 }
     ]);
   };
 
   const changeAmountJen = (number) => {
     setAmount(amount => [
-      { number: number * 41.76, content: "JPY", id: 1 }
+      { changednumber: number * 41.76, number, content: "JPY", id: 1 }
     ]);
   };
 
@@ -33,11 +31,9 @@ function App() {
           <Form
             changeAmountEuro={changeAmountEuro}
             changeAmountJen={changeAmountJen}
-            Task={Task}
-            amount={amount}
           />
 
-      <Task
+      <Result
         amount={amount}
       />
 

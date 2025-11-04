@@ -15,6 +15,9 @@ html {
     background-image: url("https://i.postimg.cc/R049bhH9/pexels-expect-best-323705-blacknwhite.jpg");
     font: 25px/2 'Oswald', sans-serif;
     padding: 10px;
+    display: flex;
+    
+    flex-direction: column;
 }
 
 .currency__name {

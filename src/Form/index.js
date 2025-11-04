@@ -25,7 +25,7 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
 
     return (
         <>
-            <div className="form__grid form__title form--biggerGap">
+            <div className="form__title form--biggerGap">
                 Policz wartość:
             </div>
 
@@ -49,7 +49,7 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
             
             <>
                 <section className="form__title form--biggerGap">
-                    <div className="form__grid">
+                    <div>
                         Kwota wynosi:
                     </div></section>
             </>
