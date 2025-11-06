@@ -39,13 +39,12 @@ function App() {
 
       <Header
         title="Zamiana walut"
+        myDate={myDate}
       />
 
       <>
         <p>
-
-          Dzisiaj jest {myDate}
-
+          
         </p>
       </>
 
