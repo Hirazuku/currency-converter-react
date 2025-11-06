@@ -1,13 +1,26 @@
 import Container from "./Container";
 import Header from "./Header";
 import Form from "./Form";
-import {Result} from "./Result";
-import React, { useState } from 'react';
+import { Result } from "./Result";
+import { getTime } from "./Header";
+import React, { useState, useEffect } from 'react';
 
 
 function App() {
 
   const [amount, setAmount] = useState();
+
+  const [myDate, setMyDate] = useState(new Date().toLocaleString("pl", { weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "numeric", second: "numeric" }))
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setMyDate(myDate => new Date().toLocaleString("pl", { weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "numeric", second: "numeric" }))
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, []);
 
   const changeAmountEuro = (number) => {
     setAmount(amount => [
@@ -27,11 +40,19 @@ function App() {
       <Header
         title="Zamiana walut"
       />
-      
-          <Form
-            changeAmountEuro={changeAmountEuro}
-            changeAmountJen={changeAmountJen}
-          />
+
+      <>
+        <p>
+
+          Dzisiaj jest {myDate}
+
+        </p>
+      </>
+
+      <Form
+        changeAmountEuro={changeAmountEuro}
+        changeAmountJen={changeAmountJen}
+      />
 
       <Result
         amount={amount}
