@@ -42,12 +42,6 @@ function App() {
         myDate={myDate}
       />
 
-      <>
-        <p>
-          
-        </p>
-      </>
-
       <Form
         changeAmountEuro={changeAmountEuro}
         changeAmountJen={changeAmountJen}
