@@ -10,11 +10,11 @@ function App() {
 
   const [amount, setAmount] = useState();
 
-  const [myDate, setMyDate] = useState(new Date().toLocaleString("pl", { weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "numeric", second: "numeric" }))
+  const [myDate, setMyDate] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setMyDate(myDate => new Date().toLocaleString("pl", { weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "numeric", second: "numeric" }))
+      setMyDate(myDate => new Date());
     }, 1000);
 
     return () => {
