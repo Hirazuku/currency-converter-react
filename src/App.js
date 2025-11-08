@@ -2,7 +2,6 @@ import Container from "./Container";
 import Header from "./Header";
 import Form from "./Form";
 import { Result } from "./Result";
-import { getTime } from "./Header";
 import React, { useState, useEffect } from 'react';
 
 
@@ -39,12 +38,12 @@ function App() {
 
       <Header
         title="Zamiana walut"
-        myDate={myDate}
       />
 
       <Form
         changeAmountEuro={changeAmountEuro}
         changeAmountJen={changeAmountJen}
+        myDate={myDate}
       />
 
       <Result

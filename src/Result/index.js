@@ -13,7 +13,6 @@ export const Result = ({ amount }) => (
                         >
                             <span >{task.number}&nbsp;PLN&nbsp;=&nbsp;{task.changednumber}&nbsp;{task.content}</span>
                         </li>
-
                     ))
                 }
             </>

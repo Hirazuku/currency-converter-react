@@ -13,14 +13,13 @@ html {
     max-width: 900px;
     color: #000000;
     background-image: url("https://i.postimg.cc/R049bhH9/pexels-expect-best-323705-blacknwhite.jpg");
-    font: 25px/2 'Oswald', sans-serif;
-    padding: 10px;
-    display: flex;
-    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     flex-direction: column;
 }
 
 .currency__name {
     margin: 10px;
 }
-

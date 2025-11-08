@@ -46,6 +46,12 @@
     font-size: 25px;
 }
 
+.form__timer {
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media (max-width: 600px) {
     .form {
         padding: 25px;

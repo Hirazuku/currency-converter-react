@@ -2,7 +2,7 @@ import "./style.css";
 import React, { useState } from 'react';
 
 
-const Form = ({ changeAmountEuro, changeAmountJen }) => {
+const Form = ({ changeAmountEuro, changeAmountJen, myDate }) => {
 
     const [number, setNumber] = useState();
     const [currency, setCurrency] = useState();
@@ -25,6 +25,17 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
 
     return (
         <>
+                <p className="form__timer">
+                    Dzisiaj jest {myDate.toLocaleString("pl", {
+                        weekday: "long",
+                        day: "numeric",
+                        month: "long",
+                        hour: "numeric",
+                        minute: "numeric",
+                        second: "numeric"
+                    })}
+                </p>
+
             <div className="form__title form--biggerGap">
                 Policz wartość:
             </div>
@@ -46,7 +57,7 @@ const Form = ({ changeAmountEuro, changeAmountJen }) => {
                 </select>
                 <button className="button">Przelicz</button>
             </form>
-            
+
             <>
                 <section className="form__title form--biggerGap">
                     <div>
