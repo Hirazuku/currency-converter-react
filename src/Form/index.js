@@ -66,7 +66,6 @@ const Form = ({ changeAmountEuro, changeAmountJen, myDate }) => {
             </>
         </>
     )
-
 }
 
 export default Form;    

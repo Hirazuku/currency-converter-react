@@ -4,7 +4,6 @@ import Form from "./Form";
 import { Result } from "./Result";
 import React, { useState, useEffect } from 'react';
 
-
 function App() {
 
   const [amount, setAmount] = useState();
@@ -49,7 +48,6 @@ function App() {
       <Result
         amount={amount}
       />
-
 
     </Container>
   );
