@@ -2,6 +2,8 @@
 
 Link for my website: https://hirazuku.github.io/currency-converter-react/
 
+![animation](public/Animation.gif)
+
 ## Description
 
 This app allows you to convert PLN amounts to EUR or JPY. This is the earlier version of currency converter, the final version is called currency-converter-react-another-form.
